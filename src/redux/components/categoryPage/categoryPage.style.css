@@ -1,0 +1,25 @@
+.product-page {
+  width: 100%;
+  height: 444px;
+}
+
+.product-page__title {
+  margin-top: 80px;
+
+  text-align: start;
+  color: #1d1f22;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 160%;
+  text-transform: capitalize;
+}
+
+.product-page__list-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 380px); /* ToDo 386px*/
+
+  grid-column-gap: 40px;
+  grid-row-gap: 60px;
+
+  margin-top: 100px;
+}
