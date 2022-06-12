@@ -1,9 +1,11 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import apolloClientApp from '../../apolloClientApp';
 import OrderCard from '../orderCard/orderCard';
 import OrderCardMini from '../orderCardMini/orderCardMini';
+import SummaryMini from '../summaryMini/summaryMini';
 
 import './miniCart.style.css';
 
@@ -54,9 +56,21 @@ class MiniCart extends React.Component {
                   />
                 ))}
               </div>
+              <SummaryMini
+                orders={orders}
+                products={products}
+                curSymbol={curSymbol}
+                quantity={quantity}
+              />
               <div className="mini-cart__buttons">
-                <button lassName="mini-cart__btn-to-bag"></button>
-                <button lassName="mini-cart__btn-check-out"></button>
+                <Link
+                  className="mini-cart__btn-to-bag"
+                  to="../cart"
+                  onClick={this.hideMiniCart}
+                >
+                  View bag
+                </Link>
+                <button className="mini-cart__btn-check-out">CHECK OUT</button>
               </div>
             </div>
           ) : (
@@ -65,13 +79,15 @@ class MiniCart extends React.Component {
         </div>
         <div
           className="mini-cart__background"
-          onClick={this.clickMiniCartBackground}
+          onClick={this.hideMiniCart}
         ></div>
       </>
     );
   }
 
-  clickMiniCartBackground = () => {
+  hideMiniCart = () => {
+    document.body.style.overflow = 'visible';
+
     this.setState({ isOpen: false });
     this.props.setIsOpen();
   };

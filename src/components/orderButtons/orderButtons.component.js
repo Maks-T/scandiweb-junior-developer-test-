@@ -16,13 +16,13 @@ class OrderButtons extends React.Component {
     return (
       <div className="order-buttons">
         <button
-          className="order-buttons__decrease"
-          onClick={() => this.clickBtnDecrease()}
+          className="order-buttons__increase"
+          onClick={() => this.clickBtnIncrease()}
         ></button>
         <span className="order-buttons__quantity">{quantity}</span>
         <button
-          className="order-buttons__increase"
-          onClick={() => this.clickBtnIncrease()}
+          className="order-buttons__decrease"
+          onClick={() => this.clickBtnDecrease()}
         ></button>
       </div>
     );

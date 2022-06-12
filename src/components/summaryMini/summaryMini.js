@@ -1,24 +1,20 @@
 import React from 'react';
 
-import './summary.style.css';
+import './summaryMini.style.css';
 
-class Summary extends React.Component {
+class SummaryMini extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     const { quantity } = this.props;
-    const { tax, totalTaxes, total } = this.getSummary();
+    const { total } = this.getSummary();
 
     return (
-      <div className="summary">
-        <div className="summary-name">{`Tax ${tax}%`}</div>
-        <div className="summary-cost">{totalTaxes}</div>
-        <div className="summary-name">quantity</div>
-        <div className="summary-cost">{quantity}</div>
-        <div className="summary-name">Total</div>
-        <div className="summary-cost">{total}</div>
+      <div className="summary-mini">
+        <div className="summary-mini-name">Total</div>
+        <div className="summary-mini-cost">{total}</div>
       </div>
     );
   }
@@ -45,8 +41,6 @@ class Summary extends React.Component {
 
     const total = Math.round((totalWithoutTaxes + totalTaxes) * 100) / 100;
 
-    console.log({ totalWithoutTaxes, tax, totalTaxes, total });
-
     return {
       tax,
       totalTaxes: curSymbol + totalTaxes,
@@ -55,4 +49,4 @@ class Summary extends React.Component {
   }
 }
 
-export default Summary;
+export default SummaryMini;

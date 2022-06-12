@@ -1,0 +1,20 @@
+.summary-mini {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 15px 0;
+}
+
+.summary-mini-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.summary-mini-cost {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+}

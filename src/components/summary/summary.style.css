@@ -1,4 +1,4 @@
-.cart-page__summary {
+.summary {
   display: grid;
 
   width: 184px;
@@ -11,13 +11,13 @@
   margin: 20px 0 60px 0;
 }
 
-.cart-page__summary-name {
+.summary-name {
   font-weight: 400;
   font-size: 24px;
   line-height: 28px;
 }
 
-.cart-page__summary-cost {
+.summary-cost {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
