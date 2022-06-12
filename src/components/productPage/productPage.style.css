@@ -21,6 +21,8 @@
   margin-bottom: 40px;
   object-fit: cover;
   transition: all 300ms ease-out;
+
+  cursor: pointer;
 }
 
 .product-page__img--small:hover {

@@ -85,6 +85,8 @@
   padding: 16px 32px;
 
   background: #5ece7b;
+  cursor: pointer;
+
   text-decoration: none;
 
   font-weight: 600;
