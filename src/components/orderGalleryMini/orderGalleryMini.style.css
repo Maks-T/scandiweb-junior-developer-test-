@@ -7,21 +7,23 @@
 
 .order-gallery-mini__buttons {
   position: absolute;
+  display: flex;
 
   right: 10px;
   bottom: 10px;
-  display: flex;
 }
 
 .order-gallery-mini__buttons-left,
 .order-gallery-mini__buttons-right {
   display: block;
-  text-align: center;
+
+  width: 16px;
+  height: 16px;
 
   background: rgba(0, 0, 0, 0.73) url(./../../assets/icons/icon-left.svg) center
     no-repeat;
-  width: 16px;
-  height: 16px;
+
+  text-align: center;
 }
 
 .order-gallery-mini__buttons-right {

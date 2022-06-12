@@ -1,6 +1,7 @@
 .cart-page {
   width: 100%;
   min-height: 100vh;
+
   color: #1d1f22;
   text-align: start;
 }
@@ -14,7 +15,4 @@
   font-size: 32px;
   line-height: 40px;
   text-transform: uppercase;
-}
-
-.cart-page__list-order {
 }

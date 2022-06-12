@@ -4,26 +4,28 @@
   align-items: flex-start;
   flex-direction: column;
   width: 292px;
-
   margin-left: 100px;
+
   text-align: start;
   color: #1d1f22;
 }
 
 .product-panel__brand {
+  margin-bottom: 16px;
+
   text-align: start;
   font-weight: 600;
   font-size: 30px;
   line-height: 27px;
-  margin-bottom: 16px;
 }
 
 .product-panel__title {
+  margin-bottom: 43px;
+
   text-align: start;
   font-weight: 400;
   font-size: 30px;
   line-height: 27px;
-  margin-bottom: 43px;
 }
 
 .product-panel__description {
@@ -40,6 +42,7 @@
 
 .product-panel__price-title {
   margin-bottom: 8px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
@@ -58,13 +61,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  outline: none;
-  border: none;
 
   width: 292px;
   height: 52px;
-
   padding: 16px 32px;
+  margin-bottom: 40px;
+  outline: none;
+  border: none;
 
   background: #5ece7b;
 
@@ -73,9 +76,7 @@
   line-height: 120%;
   text-align: center;
   text-transform: uppercase;
-
   color: #fff;
-  margin-bottom: 40px;
 }
 
 .product-panel__btn-add-to-cart:hover {

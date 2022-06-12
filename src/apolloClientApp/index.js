@@ -81,17 +81,7 @@ class ApolloClientApp {
 
     const curSymbol = state.getState().currency.curCurrency.symbol;
 
-    return query.data.category
-      .products; /*.map((product) => ({
-      id: product.id,
-      title: product.name,
-      imgSrc: product.gallery[0],
-      brand: product.brand,
-      amount:
-        curSymbol +
-        product.prices.find((price) => price.currency.symbol === curSymbol)
-          .amount,
-    }));*/
+    return query.data.category.products;
   };
 
   getProductById = async (idProduct) => {

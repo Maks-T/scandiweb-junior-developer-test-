@@ -1,13 +1,15 @@
 .color-panel-mini {
   display: block;
 
-  color: #1d1f22;
-  text-align: start;
   margin-bottom: 5px;
+
+  text-align: start;
+  color: #1d1f22;
 }
 
 .color-panel-mini__title {
   margin-bottom: 4px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -28,7 +30,6 @@
   height: 18px;
   margin-top: 5px;
   margin-right: 6px;
-
   padding: 1px;
 }
 
@@ -42,13 +43,13 @@
 
   border: 1px solid #1d1f2235;
 
+  cursor: pointer;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   text-align: start;
   color: #1d1f22;
-
-  cursor: pointer;
 }
 
 .color-panel-mini__size:last-child {

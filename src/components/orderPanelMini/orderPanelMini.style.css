@@ -18,12 +18,12 @@
 
 .order-panel-mini__title {
   outline: none;
+
   text-decoration: none;
   text-align: start;
   font-weight: 300;
   font-size: 16px;
   line-height: 160%;
-
   color: #1d1f22;
 }
 .order-panel-mini__title:hover {
@@ -38,24 +38,25 @@
 }
 
 .order-panel-mini__price-amount {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 160%;
   text-align: start;
-  margin-bottom: 10px;
 }
 
 .btn-add-to-cart {
   display: flex;
   align-items: center;
   justify-content: center;
-  outline: none;
-  border: none;
 
   width: 292px;
   height: 52px;
-
   padding: 16px 32px;
+  margin-bottom: 40px;
+  outline: none;
+  border: none;
 
   background: #5ece7b;
 
@@ -64,9 +65,7 @@
   line-height: 120%;
   text-align: center;
   text-transform: uppercase;
-
   color: #fff;
-  margin-bottom: 40px;
 }
 
 .btn-add-to-cart:hover {

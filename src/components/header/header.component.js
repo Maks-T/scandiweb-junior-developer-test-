@@ -5,7 +5,7 @@ import { addProducts } from '../../redux/actions';
 import CurrencySwitcher from '../currencySwitcher/currencySwitcher.component';
 import CartIcon from '../cartIcon/cartIcon.component';
 import Menu from '../menu/menu.component';
-///import styles from './header.style.css';
+
 import './header.style.css';
 
 class Header extends React.Component {
@@ -24,6 +24,7 @@ class Header extends React.Component {
     return (
       <header className="header">
         <Menu categories={categories} />
+        <div className="logo"></div>
         <div className="header__right-menu">
           <CurrencySwitcher />
           <CartIcon />

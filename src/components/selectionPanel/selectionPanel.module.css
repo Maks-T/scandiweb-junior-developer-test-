@@ -1,13 +1,14 @@
 .root {
   display: block;
-
-  color: #1d1f22;
-  text-align: start;
   margin-bottom: 16px;
+
+  text-align: start;
+  color: #1d1f22;
 }
 
 .title {
   margin-bottom: 8px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
@@ -29,18 +30,17 @@
   margin-top: 5px;
   margin-right: 12px;
   border: 2px solid #1d1f22;
+  cursor: pointer;
 
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   text-align: start;
   color: #1d1f22;
-
-  cursor: pointer;
 }
 .selection:hover {
-  color: white;
   background-color: #1d1f22cc;
+  color: white;
 }
 
 .selection:last-child {
@@ -48,6 +48,6 @@
 }
 
 .selection.selected {
-  color: white;
   background-color: #1d1f22;
+  color: white;
 }

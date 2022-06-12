@@ -1,6 +1,7 @@
 .currency-switcher {
   position: relative;
   z-index: 1;
+
   cursor: pointer;
 }
 
@@ -8,6 +9,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
   height: 80px;
 }
 
@@ -17,16 +19,20 @@
 
 .currency-switcher__board-icon-up {
   display: block;
-  background: url(./../../assets/icons/icon-up.svg) 100% center no-repeat;
+
   width: 10px;
   height: 10px;
+
+  background: url(./../../assets/icons/icon-up.svg) 100% center no-repeat;
 }
 
 .currency-switcher__board-icon-down {
   display: block;
-  background: url(./../../assets/icons/icon-down.svg) 100% center no-repeat;
+
   width: 10px;
   height: 10px;
+
+  background: url(./../../assets/icons/icon-down.svg) 100% center no-repeat;
 }
 
 .currency-switcher__menu-background {
@@ -34,8 +40,10 @@
   z-index: 0;
   top: 0;
   left: 0;
+
   height: 100vh;
   width: 100vw;
+
   background-color: transparent;
 }
 
@@ -46,6 +54,7 @@
   z-index: 1;
 
   background-color: #fff;
+
   text-decoration: none;
   list-style: none;
   text-align: start;

@@ -13,7 +13,6 @@ class MiniCart extends React.Component {
   constructor(props) {
     super(props);
     this.state = { products: [], isOpen: true };
-    console.log('props');
   }
 
   async componentDidMount() {

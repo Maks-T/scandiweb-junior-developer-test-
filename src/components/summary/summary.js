@@ -45,8 +45,6 @@ class Summary extends React.Component {
 
     const total = Math.round((totalWithoutTaxes + totalTaxes) * 100) / 100;
 
-    console.log({ totalWithoutTaxes, tax, totalTaxes, total });
-
     return {
       tax,
       totalTaxes: curSymbol + totalTaxes,

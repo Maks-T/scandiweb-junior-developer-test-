@@ -16,12 +16,13 @@
 .order-gallery__buttons-left,
 .order-gallery__buttons-right {
   display: block;
-  text-align: center;
 
-  background: rgba(0, 0, 0, 0.73) url(./../../assets/icons/icon-left.svg) center
-    no-repeat;
   width: 24px;
   height: 24px;
+  background: rgba(0, 0, 0, 0.73) url(./../../assets/icons/icon-left.svg) center
+    no-repeat;
+
+  text-align: center;
 }
 
 .order-gallery__buttons-right {

@@ -68,12 +68,6 @@ class CartPage extends React.Component {
     products.splice(id, 1);
 
     this.setState({ products });
-
-    setTimeout(() => {
-      console.log('STATE PRODUCTS  ', this.state.products);
-      console.log('PROPS ORDERS  ', this.props.orders);
-      console.log('STATE  ', state.getState());
-    }, 800);
   };
 }
 
