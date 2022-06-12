@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
-import './cartPage.style.css';
 import apolloClientApp from '../../apolloClientApp';
 import OrderCard from '../orderCard/orderCard';
 import Summary from '../summary/summary';
+import './cartPage.style.css';
 
 class CartPage extends React.Component {
   constructor(props) {
