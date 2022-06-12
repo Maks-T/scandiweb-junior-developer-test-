@@ -11,7 +11,6 @@ class CartIcon extends React.Component {
   }
 
   render() {
-    const { quantity } = this.props;
     const { isOpenMiniCart } = this.state;
 
     return (

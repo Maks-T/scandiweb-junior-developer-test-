@@ -10,10 +10,6 @@ import './orderPanel.style.css';
 import { Link } from 'react-router-dom';
 
 class OrderPanel extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { brand, title, amount, attributes, curAttr, productId } = this.props;
 
@@ -40,17 +36,17 @@ class OrderPanel extends React.Component {
                 readonly={true}
               />
             );
-          if (attr.id !== 'Color')
-            return (
-              <SelectionPanel
-                key={attr.id}
-                id={attr.id}
-                selections={attr.items.map((item) => item.value)}
-                title={`${attr.id}:`}
-                curSelection={curAttr[i].cur}
-                readonly={true}
-              />
-            );
+
+          return (
+            <SelectionPanel
+              key={attr.id}
+              id={attr.id}
+              selections={attr.items.map((item) => item.value)}
+              title={`${attr.id}:`}
+              curSelection={curAttr[i].cur}
+              readonly={true}
+            />
+          );
         })}
       </section>
     );

@@ -3,12 +3,7 @@ import React from 'react';
 import './summaryMini.style.css';
 
 class SummaryMini extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    const { quantity } = this.props;
     const { total } = this.getSummary();
 
     return (

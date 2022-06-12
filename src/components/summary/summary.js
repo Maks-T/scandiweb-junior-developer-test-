@@ -3,10 +3,6 @@ import React from 'react';
 import './summary.style.css';
 
 class Summary extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { quantity } = this.props;
     const { tax, totalTaxes, total } = this.getSummary();

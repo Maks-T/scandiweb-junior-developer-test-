@@ -1,7 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import apolloClientApp from '../../apolloClientApp';
-import { addProducts } from '../../redux/actions';
+
 import CurrencySwitcher from '../currencySwitcher/currencySwitcher.component';
 import CartIcon from '../cartIcon/cartIcon.component';
 import Menu from '../menu/menu.component';

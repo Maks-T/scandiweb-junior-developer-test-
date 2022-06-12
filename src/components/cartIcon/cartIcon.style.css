@@ -7,8 +7,6 @@
 
   height: 80px;
   margin-left: 20px;
-
-  cursor: pointer;
 }
 
 .icon-cart__icon {
@@ -16,6 +14,7 @@
   z-index: 3;
   background: url(./../../assets/icons/icon-empty-cart.svg) 100% center
     no-repeat;
+  cursor: pointer;
 
   width: 20px;
   height: 20px;

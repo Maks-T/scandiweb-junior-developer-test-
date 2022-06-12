@@ -5,10 +5,6 @@ import { addToCart } from '../../redux/actions';
 import './productCard.style.css';
 
 class ProductCard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { id, name, imgSrc, brand, amount } = this.props;
     return (

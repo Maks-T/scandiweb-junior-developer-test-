@@ -67,6 +67,7 @@ export default function(state = initialState, action) {
 
         return updatedState;
       }
+      return state;
     }
 
     case DECREASE_QUANTITY_ORDER: {
@@ -86,7 +87,8 @@ export default function(state = initialState, action) {
         localStorage.setItem('cart', JSON.stringify(updatedState));
 
         return updatedState;
-      } else return state;
+      }
+      return state;
     }
 
     case REMOVE_ORDER: {

@@ -5,7 +5,6 @@ import './cartPage.style.css';
 import apolloClientApp from '../../apolloClientApp';
 import OrderCard from '../orderCard/orderCard';
 import Summary from '../summary/summary';
-import state from '../../redux/store';
 
 class CartPage extends React.Component {
   constructor(props) {

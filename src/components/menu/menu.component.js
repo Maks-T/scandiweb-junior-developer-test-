@@ -1,14 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
+
 import { NavLink } from 'react-router-dom';
-import { addProducts } from '../../redux/actions';
+
 import './menu.style.css';
 
 class Menu extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { categories } = this.props;
     return (

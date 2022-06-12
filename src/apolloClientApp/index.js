@@ -1,5 +1,4 @@
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
-import state from './../redux/store';
 
 const URI_SERVER = `http://localhost:4000/`;
 
@@ -78,8 +77,6 @@ class ApolloClientApp {
     });
 
     if (!query.data.category) return null;
-
-    const curSymbol = state.getState().currency.curCurrency.symbol;
 
     return query.data.category.products;
   };

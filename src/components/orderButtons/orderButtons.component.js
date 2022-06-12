@@ -1,7 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-
-import { addToCart } from '../../redux/actions';
 
 import './orderButtons.style.css';
 

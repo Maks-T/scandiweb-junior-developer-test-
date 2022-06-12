@@ -1,4 +1,3 @@
-import { ApolloProvider } from '@apollo/client';
 import React from 'react';
 import apolloClientApp from './apolloClientApp';
 
@@ -6,7 +5,7 @@ import './App.css';
 import CategoryPage from './components/categoryPage/categoryPage';
 
 import Header from './components/header/header.component';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import ProductPage from './components/productPage/productPage';
 import CartPage from './components/cartPage/cartPage';
 
@@ -23,8 +22,6 @@ class App extends React.Component {
   }
 
   render() {
-    const { products, categories } = this.state;
-
     return (
       <div className="App">
         <div className="App__wrapper">

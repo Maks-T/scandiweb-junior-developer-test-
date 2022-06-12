@@ -9,10 +9,6 @@ import SelectionPanelMini from '../selectionPanelMini/selectionPanelMini.compone
 import ColorPanelMini from '../colorPanelMini/colorPanelMini.component';
 
 class OrderPanelMini extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { brand, title, amount, attributes, curAttr, productId } = this.props;
 
@@ -42,17 +38,17 @@ class OrderPanelMini extends React.Component {
                 readonly={true}
               />
             );
-          if (attr.id !== 'Color')
-            return (
-              <SelectionPanelMini
-                key={attr.id}
-                id={attr.id}
-                selections={attr.items.map((item) => item.value)}
-                title={`${attr.id}:`}
-                curSelection={curAttr[i].cur}
-                readonly={true}
-              />
-            );
+
+          return (
+            <SelectionPanelMini
+              key={attr.id}
+              id={attr.id}
+              selections={attr.items.map((item) => item.value)}
+              title={`${attr.id}:`}
+              curSelection={curAttr[i].cur}
+              readonly={true}
+            />
+          );
         })}
       </section>
     );

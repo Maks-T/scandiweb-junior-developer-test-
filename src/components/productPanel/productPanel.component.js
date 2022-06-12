@@ -38,16 +38,16 @@ class ProductPanel extends React.Component {
                 }))}
               />
             );
-          if (attr.id !== 'Color')
-            return (
-              <SelectionPanel
-                ref={ref}
-                key={attr.id}
-                id={attr.id}
-                selections={attr.items.map((item) => item.value)}
-                title={`${attr.id}:`}
-              />
-            );
+
+          return (
+            <SelectionPanel
+              ref={ref}
+              key={attr.id}
+              id={attr.id}
+              selections={attr.items.map((item) => item.value)}
+              title={`${attr.id}:`}
+            />
+          );
         })}
 
         <div className="product-panel__price">
