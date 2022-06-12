@@ -5,8 +5,8 @@ import { addToCart } from '../../redux/actions';
 
 import { Link } from 'react-router-dom';
 import './orderPanelMini.style.css';
-import SelectionPanelMini from '../selectionPanelMini/selectionPanelMini.component';
-import ColorPanelMini from '../colorPanelMini/colorPanelMini.component';
+import SelectionPanelMini from '../selectionPanelMini/selectionPanelMini';
+import ColorPanelMini from '../colorPanelMini/colorPanelMini';
 
 class OrderPanelMini extends React.Component {
   render() {

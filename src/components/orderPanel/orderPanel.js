@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import ColorPanel from '../colorPanel/colorPanel.component';
+import ColorPanel from '../colorPanel/colorPanel';
 
-import SelectionPanel from '../selectionPanel/selectionPanel.component';
+import SelectionPanel from '../selectionPanel/selectionPanel';
 import { addToCart } from '../../redux/actions';
 
 import './orderPanel.style.css';

@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './productPage.style.css';
 import apolloClientApp from '../../apolloClientApp';
-import ProductPanel from '../productPanel/productPanel.component';
+import ProductPanel from '../productPanel/productPanel';
 
 function withParams(Component) {
   return (props) => <Component {...props} params={useParams()} />;

@@ -16,7 +16,7 @@
 
 .category-page__list-card {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 380px); /* ToDo 386px*/
+  grid-template-columns: repeat(auto-fill, 380px);
   grid-column-gap: 40px;
   grid-row-gap: 60px;
 

@@ -7,11 +7,11 @@ import {
   removeOrder,
 } from '../../redux/actions';
 
-import OrderPanelMini from '../orderPanelMini/orderPanelMini.component';
+import OrderPanelMini from '../orderPanelMini/orderPanelMini';
 
 import './orderCardMini.style.css';
-import OrderButtonsMini from '../orderButtonsMini/orderButtonsMini.component';
-import OrderGalleryMini from '../orderGalleryMini/orderGalleryMini.component';
+import OrderButtonsMini from '../orderButtonsMini/orderButtonsMini';
+import OrderGalleryMini from '../orderGalleryMini/orderGalleryMini';
 
 class OrderCardMini extends React.Component {
   constructor(props) {

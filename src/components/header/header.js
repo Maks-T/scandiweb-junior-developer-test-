@@ -1,9 +1,9 @@
 import React from 'react';
 import apolloClientApp from '../../apolloClientApp';
 
-import CurrencySwitcher from '../currencySwitcher/currencySwitcher.component';
-import CartIcon from '../cartIcon/cartIcon.component';
-import Menu from '../menu/menu.component';
+import CurrencySwitcher from '../currencySwitcher/currencySwitcher';
+import CartIcon from '../cartIcon/cartIcon';
+import Menu from '../menu/menu';
 
 import './header.style.css';
 

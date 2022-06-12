@@ -4,7 +4,7 @@ import apolloClientApp from './apolloClientApp';
 import './App.css';
 import CategoryPage from './components/categoryPage/categoryPage';
 
-import Header from './components/header/header.component';
+import Header from './components/header/header';
 import { Routes, Route } from 'react-router-dom';
 import ProductPage from './components/productPage/productPage';
 import CartPage from './components/cartPage/cartPage';

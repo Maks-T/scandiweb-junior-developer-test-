@@ -8,9 +8,9 @@ import {
 } from '../../redux/actions';
 
 import './orderCard.style.css';
-import OrderPanel from '../orderPanel/orderPanel.component';
-import OrderGallery from '../orderGallery/orderGallery.component';
-import OrderButtons from '../orderButtons/orderButtons.component';
+import OrderPanel from '../orderPanel/orderPanel';
+import OrderGallery from '../orderGallery/orderGallery';
+import OrderButtons from '../orderButtons/orderButtons';
 
 class OrderCard extends React.Component {
   constructor(props) {
