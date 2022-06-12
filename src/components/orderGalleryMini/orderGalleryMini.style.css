@@ -1,0 +1,50 @@
+.order-gallery-mini {
+  position: relative;
+  min-width: 80px;
+  max-width: 200px;
+  height: 190px;
+}
+
+.order-gallery-mini__buttons {
+  position: absolute;
+
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+}
+
+.order-gallery-mini__buttons-left,
+.order-gallery-mini__buttons-right {
+  display: block;
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.73) url(./../../assets/icons/icon-left.svg) center
+    no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.order-gallery-mini__buttons-right {
+  margin-left: 5px;
+  background: rgba(0, 0, 0, 0.73) url(./../../assets/icons/icon-right.svg)
+    center no-repeat;
+}
+
+.order-gallery-mini__buttons-left:hover,
+.order-gallery-mini__buttons-right:hover {
+  opacity: 0.8;
+}
+
+.order-gallery-mini__buttons-left:active {
+  transform: translate(-1px, 1px);
+}
+
+.order-gallery-mini__buttons-right:active {
+  transform: translate(1px, 1px);
+}
+
+.order-gallery-mini__img {
+  width: 100%;
+
+  object-fit: contain;
+}

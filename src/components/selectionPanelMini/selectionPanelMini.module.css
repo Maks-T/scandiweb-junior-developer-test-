@@ -1,0 +1,52 @@
+.root {
+  display: block;
+
+  color: #1d1f22;
+  text-align: start;
+  margin-bottom: 5px;
+}
+
+.title {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: start;
+  text-transform: capitalize;
+}
+.selections {
+  display: flex;
+  flex-wrap: wrap;
+}
+.selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 24px;
+  height: 24px;
+
+  margin-top: 4px;
+  margin-right: 12px;
+  padding: 4px;
+
+  border: 2px solid #1d1f22;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+
+  text-align: start;
+  color: #1d1f22;
+
+  cursor: pointer;
+}
+
+.selection:last-child {
+  margin-right: 0;
+}
+
+.selection.selected {
+  color: white;
+  background-color: #1d1f22;
+}

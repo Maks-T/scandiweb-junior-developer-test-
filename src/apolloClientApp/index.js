@@ -1,4 +1,5 @@
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
+import state from './../redux/store';
 
 const URI_SERVER = `http://localhost:4000/`;
 
@@ -20,9 +21,23 @@ class ApolloClientApp {
         }
       `,
     });
-    console.log('query get Categories', query);
 
     return query.data.categories.map((category) => category.name);
+  };
+
+  getCurrencies = async () => {
+    const query = await this.client.query({
+      query: gql`
+        query {
+          currencies {
+            symbol
+            label
+          }
+        }
+      `,
+    });
+
+    return query.data.currencies;
   };
 
   getProductsByCategory = async (categoryName) => {
@@ -38,6 +53,16 @@ class ApolloClientApp {
               gallery
               description
               category
+              attributes {
+              id
+              name
+              type
+              items {
+                displayValue
+                value
+                id
+              }
+            }
               prices {
                 currency {
                   label
@@ -51,14 +76,61 @@ class ApolloClientApp {
         }
       `,
     });
-    console.log(`query get Category = ${categoryName}`, query);
 
-    return query.data.category.products.map((product) => ({
+    if (!query.data.category) return null;
+
+    const curSymbol = state.getState().currency.curCurrency.symbol;
+
+    return query.data.category
+      .products; /*.map((product) => ({
       id: product.id,
       title: product.name,
       imgSrc: product.gallery[0],
-      amount: product.prices[0].currency.symbol + product.prices[0].amount,
-    }));
+      brand: product.brand,
+      amount:
+        curSymbol +
+        product.prices.find((price) => price.currency.symbol === curSymbol)
+          .amount,
+    }));*/
+  };
+
+  getProductById = async (idProduct) => {
+    const query = await this.client.query({
+      query: gql`
+        query {
+          product(id: "${idProduct}") {
+            id
+            name
+            inStock
+            gallery
+            description
+            category
+            attributes {
+              id
+              name
+              type
+              items {
+                displayValue
+                value
+                id
+              }
+            }
+            prices {
+              currency {
+                label
+                symbol
+              }
+              amount
+            }
+            brand
+          }
+        }
+      `,
+    });
+
+    if (!query.data.product) return null;
+
+    return query.data.product;
   };
 }
 

@@ -1,5 +1,8 @@
 import { combineReducers } from 'redux';
+import currency from './currency';
 import cart from './cart';
-import category from './category';
 
-export default combineReducers({ cart /*, category*/ });
+export default combineReducers({
+  currency,
+  cart,
+});

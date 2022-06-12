@@ -1,0 +1,39 @@
+.order-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-buttons__decrease,
+.order-buttons__increase {
+  width: 45px;
+  height: 45px;
+
+  border: 1px solid #1d1f22;
+  background: url(./../../assets/icons/icon-minus.svg) center no-repeat;
+  font-size: 36px;
+  font-weight: 300;
+  outline: none;
+}
+
+.order-buttons__increase {
+  background: url(./../../assets/icons/icon-minus.svg) center no-repeat,
+    url(./../../assets/icons/icon-plus.svg) center no-repeat;
+}
+
+.order-buttons__decrease:hover,
+.order-buttons__increase:hover {
+  opacity: 0.85;
+}
+
+.order-buttons__decrease:active,
+.order-buttons__increase:active {
+  transform: translate(1px, 1px);
+}
+
+.order-buttons__quantity {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 160%;
+}

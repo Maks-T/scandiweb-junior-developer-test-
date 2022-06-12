@@ -1,0 +1,20 @@
+.cart-page {
+  width: 100%;
+  min-height: 100vh;
+  color: #1d1f22;
+  text-align: start;
+}
+
+.cart-page__title {
+  margin-top: 80px;
+
+  text-align: start;
+  color: #1d1f22;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.cart-page__list-order {
+}

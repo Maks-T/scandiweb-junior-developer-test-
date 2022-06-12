@@ -1,0 +1,60 @@
+.currency-switcher {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.currency-switcher__board {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80px;
+}
+
+.currency-switcher__board-symbol {
+  margin-right: 6px;
+}
+
+.currency-switcher__board-icon-up {
+  display: block;
+  background: url(./../../assets/icons/icon-up.svg) 100% center no-repeat;
+  width: 10px;
+  height: 10px;
+}
+
+.currency-switcher__board-icon-down {
+  display: block;
+  background: url(./../../assets/icons/icon-down.svg) 100% center no-repeat;
+  width: 10px;
+  height: 10px;
+}
+
+.currency-switcher__menu-background {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+}
+
+.currency-switcher__menu {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  z-index: 1;
+
+  background-color: #fff;
+  text-decoration: none;
+  list-style: none;
+  text-align: start;
+}
+.currency-switcher__menu-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.currency-switcher__menu-item:hover {
+  background-color: #eeeeee;
+}

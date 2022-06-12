@@ -1,0 +1,41 @@
+.icon-cart {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin-left: 20px;
+}
+
+.icon-cart__icon {
+  position: relative;
+  z-index: 3;
+  background: url(./../../assets/icons//icon-empty-cart.svg) 100% center
+    no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-cart__quantity {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: #1d1f22;
+  border-radius: 50%;
+
+  color: #fff;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}

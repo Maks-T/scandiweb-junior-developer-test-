@@ -1,0 +1,53 @@
+.root {
+  display: block;
+
+  color: #1d1f22;
+  text-align: start;
+  margin-bottom: 16px;
+}
+
+.title {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: start;
+  text-transform: uppercase;
+}
+.selections {
+  display: flex;
+  flex-wrap: wrap;
+}
+.selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 63px;
+  min-height: 45px;
+
+  margin-top: 5px;
+  margin-right: 12px;
+  border: 2px solid #1d1f22;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: start;
+  color: #1d1f22;
+
+  cursor: pointer;
+}
+.selection:hover {
+  color: white;
+  background-color: #1d1f22cc;
+}
+
+.selection:last-child {
+  margin-right: 0;
+}
+
+.selection.selected {
+  color: white;
+  background-color: #1d1f22;
+}

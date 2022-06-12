@@ -3,10 +3,12 @@ import React from 'react';
 import apolloClientApp from './apolloClientApp';
 
 import './App.css';
-import CategoryPage from './redux/components/categoryPage/categoryPage';
-import Good from './redux/components/good/good.component';
-import Header from './redux/components/header/header.component';
+import CategoryPage from './components/categoryPage/categoryPage';
+
+import Header from './components/header/header.component';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProductPage from './components/productPage/productPage';
+import CartPage from './components/cartPage/cartPage';
 
 class App extends React.Component {
   constructor(props) {
@@ -28,19 +30,17 @@ class App extends React.Component {
         <div className="App__wrapper">
           <Header />
           <Routes>
+            <Route path="product/:productId" element={<ProductPage />} />
             <Route path="/" element={<CategoryPage />}>
               <Route path="category" element={<CategoryPage />}>
                 <Route path=":categoryName" element={<CategoryPage />} />
 
                 <Route index element={<CategoryPage />} />
               </Route>
-              <Route
-                index
-                element={
-                  <CategoryPage title={categories[0]} products={products} />
-                }
-              />
+
+              <Route index element={<CategoryPage />} />
             </Route>
+            <Route path="cart" element={<CartPage />} />
           </Routes>
         </div>
       </div>

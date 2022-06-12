@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+}
+
+.header__right-menu {
+  display: flex;
+  flex-direction: row;
+}

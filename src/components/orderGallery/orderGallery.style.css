@@ -1,0 +1,50 @@
+.order-gallery {
+  position: relative;
+  min-width: 80px;
+  max-width: 200px;
+  height: 288px;
+}
+
+.order-gallery__buttons {
+  position: absolute;
+
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+}
+
+.order-gallery__buttons-left,
+.order-gallery__buttons-right {
+  display: block;
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.73) url(./../../assets/icons/icon-left.svg) center
+    no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.order-gallery__buttons-right {
+  margin-left: 5px;
+  background: rgba(0, 0, 0, 0.73) url(./../../assets/icons/icon-right.svg)
+    center no-repeat;
+}
+
+.order-gallery__buttons-left:hover,
+.order-gallery__buttons-right:hover {
+  opacity: 0.8;
+}
+
+.order-gallery__buttons-left:active {
+  transform: translate(-1px, 1px);
+}
+
+.order-gallery__buttons-right:active {
+  transform: translate(1px, 1px);
+}
+
+.order-gallery__img {
+  width: 100%;
+
+  object-fit: contain;
+}
