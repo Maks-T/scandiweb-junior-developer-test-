@@ -56,6 +56,7 @@ class CategoryPage extends React.Component {
                 brand={product.brand}
                 imgSrc={product.gallery[0]}
                 attributes={product.attributes}
+                inStock={product.inStock}
                 amount={
                   curSymbol +
                   product.prices.find(
