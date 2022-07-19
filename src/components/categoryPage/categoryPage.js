@@ -45,7 +45,7 @@ class CategoryPage extends React.Component {
 
     return (
       <div className="category-page">
-        <h2 className="category-page__title">{categoryName}</h2>;
+        <h2 className="category-page__title">{categoryName}</h2>
         <div className="category-page__list-card">
           {products ? (
             products.map((product) => (

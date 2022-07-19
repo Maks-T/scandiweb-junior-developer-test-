@@ -32,7 +32,7 @@ class CartPage extends React.Component {
 
     return (
       <div className="cart-page">
-        <h2 className="cart-page__title">CART</h2>;
+        <h2 className="cart-page__title">CART</h2>
         {products.length ? (
           <div>
             <div className="cart-page__list-order">
