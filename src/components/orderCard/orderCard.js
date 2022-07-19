@@ -40,7 +40,7 @@ class OrderCard extends React.Component {
           curAttr={order.curAttr}
           productId={product.id}
         />
-        {order.quantity === 0 && (
+        {order.quantity === 1 && (
           <button
             className="order-card__remove-in-cart"
             onClick={() => this.removeBtnFromCart()}

@@ -12,7 +12,7 @@ class ProductCard extends React.Component {
         to={`product/${id}`}
         className={inStock ? 'product-card' : 'product-card disabled'}
       >
-        <div class="product-card__plug">out of stock</div>
+        <div className="product-card__plug">out of stock</div>
 
         <div className="product-card__img--container">
           <img
