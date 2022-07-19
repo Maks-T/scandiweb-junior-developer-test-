@@ -1,5 +1,4 @@
 import React from 'react';
-import apolloClientApp from './apolloClientApp';
 
 import './App.css';
 import CategoryPage from './components/categoryPage/categoryPage';

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Parser from 'html-react-parser';
 
 import ColorPanel from '../colorPanel/colorPanel';
 
@@ -62,10 +63,7 @@ class ProductPanel extends React.Component {
           add to cart
         </button>
 
-        <p
-          className="product-panel__description"
-          dangerouslySetInnerHTML={{ __html: description }}
-        ></p>
+        <div className="product-panel__description">{Parser(description)}</div>
       </section>
     );
   }
