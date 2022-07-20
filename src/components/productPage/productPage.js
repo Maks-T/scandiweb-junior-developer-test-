@@ -1,13 +1,9 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './productPage.style.css';
 import apolloClientApp from '../../apolloClientApp';
 import ProductPanel from '../productPanel/productPanel';
-
-function withParams(Component) {
-  return (props) => <Component {...props} params={useParams()} />;
-}
+import getParams from '../getParams/getParams';
 
 class ProductPage extends React.Component {
   constructor(props) {
@@ -102,4 +98,4 @@ const mapStateToProps = (state) => {
   return { curCurrency };
 };
 
-export default connect(mapStateToProps, null)(withParams(ProductPage));
+export default connect(mapStateToProps, null)(getParams(ProductPage));
