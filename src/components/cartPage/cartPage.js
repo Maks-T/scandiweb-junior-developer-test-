@@ -32,20 +32,21 @@ class CartPage extends React.Component {
 
     return (
       <div className="cart-page">
-        <h2 className="cart-page__title">CART</h2>;
+        <h2 className="cart-page__title">CART</h2>
         {products.length ? (
           <div>
             <div className="cart-page__list-order">
-              {products.map((product, i) => (
-                <OrderCard
-                  key={orders[i].orderId}
-                  id={i}
-                  product={product}
-                  order={orders[i]}
-                  curSymbol={curSymbol}
-                  handleRemoveCard={this.handleRemoveCard}
-                />
-              ))}
+              {products.length === orders.length &&
+                products.map((product, i) => (
+                  <OrderCard
+                    key={orders[i].orderId}
+                    id={i}
+                    product={product}
+                    order={orders[i]}
+                    curSymbol={curSymbol}
+                    handleRemoveCard={this.handleRemoveCard}
+                  />
+                ))}
             </div>
             <Summary
               orders={orders}

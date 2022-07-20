@@ -37,7 +37,7 @@ class OrderGallery extends React.Component {
     let { curImgIndex } = this.state;
     const { length } = this.props.gallery;
 
-    if (curImgIndex > 0) {
+    if (curImgIndex > 1) {
       curImgIndex -= 1;
     } else {
       curImgIndex = length - 1;

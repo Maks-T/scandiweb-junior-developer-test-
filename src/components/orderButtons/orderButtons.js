@@ -29,7 +29,7 @@ class OrderButtons extends React.Component {
 
     this.props.decrease();
 
-    if (quantity > 0) quantity -= 1;
+    if (quantity > 1) quantity -= 1;
     this.setState({ quantity });
     return quantity;
   }

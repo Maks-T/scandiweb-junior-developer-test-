@@ -38,10 +38,45 @@
   filter: brightness(100%) contrast(100%);
 }
 
-.product-page__img {
+.product-page__img--container {
+  position: relative;
+
   display: block;
   width: 510px;
   height: 610px;
+
   margin-left: 40px;
+}
+
+.product-page__img {
+  width: 100%;
+  height: 100%;
+
   object-fit: contain;
+}
+
+.product-page__img--plug {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  display: none;
+  padding: 40% 5%;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(245, 245, 245, 0.555);
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 160%;
+  text-transform: uppercase;
+
+  color: #8d8f9a;
+}
+
+.product-page__img--plug.disabled {
+  display: block;
 }

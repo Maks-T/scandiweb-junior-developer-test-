@@ -44,16 +44,17 @@ class MiniCart extends React.Component {
               <h2 className="mini-cart__title">{`My Bag, ${quantity} item`}</h2>
 
               <div className="mini-cart__list-order">
-                {products.map((product, i) => (
-                  <OrderCardMini
-                    key={orders[i].orderId}
-                    id={i}
-                    product={product}
-                    order={orders[i]}
-                    curSymbol={curSymbol}
-                    handleRemoveCard={this.handleRemoveCard}
-                  />
-                ))}
+                {products.length === orders.length &&
+                  products.map((product, i) => (
+                    <OrderCardMini
+                      key={orders[i].orderId}
+                      id={i}
+                      product={product}
+                      order={orders[i]}
+                      curSymbol={curSymbol}
+                      handleRemoveCard={this.handleRemoveCard}
+                    />
+                  ))}
               </div>
               <SummaryMini
                 orders={orders}

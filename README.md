@@ -2,6 +2,10 @@
 
 ## Before you start, you must:
 
+### design link
+
+- `https://www.figma.com/file/MSyCAqVy1UgNap0pvqH6H3/Junior-Frontend-Test-Designs-(Public)?node-id=0%3A1`
+
 ### Launch the endpoint
 
 - `git clone https://github.com/scandiweb/junior-react-endpoint` - clones the repository GraphQL endpoint;

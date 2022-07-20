@@ -1,5 +1,4 @@
 import React from 'react';
-import apolloClientApp from './apolloClientApp';
 
 import './App.css';
 import CategoryPage from './components/categoryPage/categoryPage';
@@ -10,17 +9,6 @@ import ProductPage from './components/productPage/productPage';
 import CartPage from './components/cartPage/cartPage';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { products: [], categories: [] };
-  }
-  async componentDidMount() {
-    const categories = await apolloClientApp.getCategories();
-    const products = await apolloClientApp.getProductsByCategory(categories[0]);
-
-    this.setState({ products, categories });
-  }
-
   render() {
     return (
       <div className="App">

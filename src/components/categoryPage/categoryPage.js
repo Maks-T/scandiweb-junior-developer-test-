@@ -1,13 +1,9 @@
 import React from 'react';
 import ProductCard from '../productCard/productCard';
-import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './categoryPage.style.css';
 import apolloClientApp from '../../apolloClientApp';
-
-function withParams(Component) {
-  return (props) => <Component {...props} params={useParams()} />;
-}
+import getParams from '../getParams/getParams';
 
 class CategoryPage extends React.Component {
   constructor(props) {
@@ -45,7 +41,7 @@ class CategoryPage extends React.Component {
 
     return (
       <div className="category-page">
-        <h2 className="category-page__title">{categoryName}</h2>;
+        <h2 className="category-page__title">{categoryName}</h2>
         <div className="category-page__list-card">
           {products ? (
             products.map((product) => (
@@ -56,6 +52,7 @@ class CategoryPage extends React.Component {
                 brand={product.brand}
                 imgSrc={product.gallery[0]}
                 attributes={product.attributes}
+                inStock={product.inStock}
                 amount={
                   curSymbol +
                   product.prices.find(
@@ -79,4 +76,4 @@ const mapStateToProps = (state) => {
   return { curCurrency };
 };
 
-export default connect(mapStateToProps, null)(withParams(CategoryPage));
+export default connect(mapStateToProps, null)(getParams(CategoryPage));
