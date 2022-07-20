@@ -80,10 +80,22 @@
   color: #fff;
 }
 
+.product-panel__btn-add-to-cart:disabled {
+  background: #858585;
+}
+
 .product-panel__btn-add-to-cart:hover {
   opacity: 0.9;
 }
 
 .product-panel__btn-add-to-cart:active {
   transform: translate(1px, 1px);
+}
+
+.product-panel__btn-add-to-cart:disabled:hover {
+  opacity: 1;
+}
+
+.product-panel__btn-add-to-cart:disabled:active {
+  transform: none;
 }

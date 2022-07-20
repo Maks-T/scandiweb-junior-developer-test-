@@ -61,11 +61,23 @@ class ProductPage extends React.Component {
                 />
               ))}
             </div>
-            <img
-              alt={product.name}
-              src={curImage}
-              className="product-page__img"
-            />
+            <div className="product-page__img--container">
+              <img
+                alt={product.name}
+                src={curImage}
+                className="product-page__img"
+              />
+              <div
+                className={
+                  product.inStock
+                    ? 'product-page__img--plug'
+                    : 'product-page__img--plug disabled'
+                }
+              >
+                Out of Stock
+              </div>
+            </div>
+
             <ProductPanel
               id={product.id}
               brand={product.brand}
@@ -78,6 +90,7 @@ class ProductPage extends React.Component {
                   (price) => price.currency.symbol === curSymbol
                 ).amount
               }
+              inStock={product.inStock}
             />
           </>
         ) : (
