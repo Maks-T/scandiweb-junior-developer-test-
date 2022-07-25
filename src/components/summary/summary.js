@@ -23,6 +23,7 @@ class Summary extends React.Component {
     const { orders, products, curSymbol } = this.props;
 
     const totalWithoutTaxes =
+      orders.length === products.length &&
       Math.round(
         orders.reduce(
           (acc, order, i) =>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Parser from 'html-react-parser';
 
 import ColorPanel from '../colorPanel/colorPanel';
 
@@ -15,7 +16,14 @@ class ProductPanel extends React.Component {
   }
 
   render() {
-    const { brand, title, amount, description, attributes } = this.props;
+    const {
+      brand,
+      title,
+      amount,
+      description,
+      attributes,
+      inStock,
+    } = this.props;
     this.elemsAttr = [];
 
     return (
@@ -57,15 +65,14 @@ class ProductPanel extends React.Component {
 
         <button
           className="product-panel__btn-add-to-cart"
+          disabled={!inStock}
+          title={!inStock ? 'Out of stock!' : ''}
           onClick={() => this.addToCart()}
         >
           add to cart
         </button>
 
-        <p
-          className="product-panel__description"
-          dangerouslySetInnerHTML={{ __html: description }}
-        ></p>
+        <div className="product-panel__description">{Parser(description)}</div>
       </section>
     );
   }

@@ -1,13 +1,9 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './productPage.style.css';
 import apolloClientApp from '../../apolloClientApp';
 import ProductPanel from '../productPanel/productPanel';
-
-function withParams(Component) {
-  return (props) => <Component {...props} params={useParams()} />;
-}
+import getParams from '../getParams/getParams';
 
 class ProductPage extends React.Component {
   constructor(props) {
@@ -65,11 +61,23 @@ class ProductPage extends React.Component {
                 />
               ))}
             </div>
-            <img
-              alt={product.name}
-              src={curImage}
-              className="product-page__img"
-            />
+            <div className="product-page__img--container">
+              <img
+                alt={product.name}
+                src={curImage}
+                className="product-page__img"
+              />
+              <div
+                className={
+                  product.inStock
+                    ? 'product-page__img--plug'
+                    : 'product-page__img--plug disabled'
+                }
+              >
+                Out of Stock
+              </div>
+            </div>
+
             <ProductPanel
               id={product.id}
               brand={product.brand}
@@ -82,6 +90,7 @@ class ProductPage extends React.Component {
                   (price) => price.currency.symbol === curSymbol
                 ).amount
               }
+              inStock={product.inStock}
             />
           </>
         ) : (
@@ -102,4 +111,4 @@ const mapStateToProps = (state) => {
   return { curCurrency };
 };
 
-export default connect(mapStateToProps, null)(withParams(ProductPage));
+export default connect(mapStateToProps, null)(getParams(ProductPage));

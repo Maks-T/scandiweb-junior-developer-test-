@@ -77,7 +77,7 @@ export default function(state = initialState, action) {
 
       const findOrder = state.orders.find((order) => order.orderId === orderId);
 
-      if (findOrder && findOrder.quantity > 0) {
+      if (findOrder && findOrder.quantity > 1) {
         findOrder.quantity -= 1;
         updatedState = {
           quantity: state.quantity - 1,

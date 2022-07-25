@@ -54,7 +54,7 @@ class OrderCardMini extends React.Component {
             </div>
           </div>
           <div className="order-card-mini__bottom-side">
-            {order.quantity === 0 && (
+            {order.quantity === 1 && (
               <button
                 className="order-card-mini__remove-in-cart"
                 onClick={() => this.removeBtnFromCart()}

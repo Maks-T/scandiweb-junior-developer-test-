@@ -6,9 +6,14 @@ import './productCard.style.css';
 
 class ProductCard extends React.Component {
   render() {
-    const { id, name, imgSrc, brand, amount } = this.props;
+    const { id, name, imgSrc, brand, amount, inStock } = this.props;
     return (
-      <Link to={`product/${id}`} className="product-card">
+      <Link
+        to={`product/${id}`}
+        className={inStock ? 'product-card' : 'product-card disabled'}
+      >
+        <div className="product-card__plug">out of stock</div>
+
         <div className="product-card__img--container">
           <img
             alt={`${brand} ${name}`}
