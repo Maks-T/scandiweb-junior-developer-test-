@@ -2,11 +2,23 @@ import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
 const URI_SERVER = `http://localhost:4000/`;
 
+const defaultOptions = {
+  watchQuery: {
+    fetchPolicy: 'no-cache',
+    errorPolicy: 'ignore',
+  },
+  query: {
+    fetchPolicy: 'no-cache',
+    errorPolicy: 'all',
+  },
+};
+
 class ApolloClientApp {
   constructor() {
     this.client = new ApolloClient({
       uri: URI_SERVER,
       cache: new InMemoryCache(),
+      defaultOptions,
     });
   }
 
