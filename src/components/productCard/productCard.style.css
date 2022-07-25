@@ -12,7 +12,6 @@
 }
 
 .product-card.disabled {
-  pointer-events: none;
 }
 
 .product-card.disabled .product-card__plug {
@@ -39,10 +38,6 @@
 
 .product-card:hover {
   box-shadow: 4px 6px 24px 0px rgba(34, 60, 80, 0.2);
-}
-
-.product-card.disabled:hover {
-  box-shadow: none;
 }
 
 .product-card:hover .product-card__btn-to-cart {
