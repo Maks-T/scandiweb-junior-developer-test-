@@ -44,7 +44,6 @@ class CartPage extends React.Component {
                     product={product}
                     order={orders[i]}
                     curSymbol={curSymbol}
-                    handleRemoveCard={this.handleRemoveCard}
                   />
                 ))}
             </div>
@@ -61,14 +60,6 @@ class CartPage extends React.Component {
       </div>
     );
   }
-
-  handleRemoveCard = (id) => {
-    const { products } = this.state;
-
-    products.splice(id, 1);
-
-    this.setState({ products });
-  };
 }
 
 const mapStateToProps = (state) => {

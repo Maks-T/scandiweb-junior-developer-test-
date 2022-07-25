@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import {
   increaseQuantityOrder,
   decreaseQuantityOrder,
-  removeOrder,
 } from '../../redux/actions';
 
 import OrderPanelMini from '../orderPanelMini/orderPanelMini';
@@ -53,16 +52,7 @@ class OrderCardMini extends React.Component {
               <OrderGalleryMini gallery={product.gallery} />
             </div>
           </div>
-          <div className="order-card-mini__bottom-side">
-            {order.quantity === 1 && (
-              <button
-                className="order-card-mini__remove-in-cart"
-                onClick={() => this.removeBtnFromCart()}
-              >
-                remove
-              </button>
-            )}
-          </div>
+          <div className="order-card-mini__bottom-side"></div>
         </div>
       </section>
     );
@@ -79,16 +69,9 @@ class OrderCardMini extends React.Component {
     const quantity = decreaseQuantityOrder(order.orderId);
     this.setState({ quantity });
   }
-
-  removeBtnFromCart() {
-    const { order, removeOrder, handleRemoveCard, id } = this.props;
-    removeOrder(order.orderId);
-    handleRemoveCard(id);
-  }
 }
 
 export default connect(null, {
   increaseQuantityOrder,
   decreaseQuantityOrder,
-  removeOrder,
 })(OrderCardMini);

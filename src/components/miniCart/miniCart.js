@@ -52,7 +52,6 @@ class MiniCart extends React.Component {
                       product={product}
                       order={orders[i]}
                       curSymbol={curSymbol}
-                      handleRemoveCard={this.handleRemoveCard}
                     />
                   ))}
               </div>
@@ -90,14 +89,6 @@ class MiniCart extends React.Component {
 
     this.setState({ isOpen: false });
     this.props.setIsOpen();
-  };
-
-  handleRemoveCard = (id) => {
-    const { products } = this.state;
-
-    products.splice(id, 1);
-
-    this.setState({ products });
   };
 }
 
