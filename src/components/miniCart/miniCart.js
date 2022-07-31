@@ -52,6 +52,7 @@ class MiniCart extends React.Component {
                       product={product}
                       order={orders[i]}
                       curSymbol={curSymbol}
+                      handleRemoveCard={this.handleRemoveCard}
                     />
                   ))}
               </div>
@@ -83,6 +84,14 @@ class MiniCart extends React.Component {
       </>
     );
   }
+
+  handleRemoveCard = (id) => {
+    const { products } = this.state;
+
+    products.splice(id, 1);
+
+    this.setState({ products });
+  };
 
   hideMiniCart = () => {
     document.body.style.overflow = 'visible';

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import {
   increaseQuantityOrder,
   decreaseQuantityOrder,
+  removeOrder,
 } from '../../redux/actions';
 
 import OrderPanelMini from '../orderPanelMini/orderPanelMini';
@@ -60,18 +61,28 @@ class OrderCardMini extends React.Component {
 
   increase() {
     const { order, increaseQuantityOrder } = this.props;
-    const quantity = increaseQuantityOrder(order.orderId);
-    this.setState({ quantity });
+    increaseQuantityOrder(order.orderId);
   }
 
   decrease() {
-    const { order, decreaseQuantityOrder } = this.props;
-    const quantity = decreaseQuantityOrder(order.orderId);
-    this.setState({ quantity });
+    const {
+      order,
+      decreaseQuantityOrder,
+      removeOrder,
+      handleRemoveCard,
+      id,
+    } = this.props;
+
+    if (order.quantity === 1) {
+      handleRemoveCard(id);
+      removeOrder(order.orderId);
+    }
+    decreaseQuantityOrder(order.orderId);
   }
 }
 
 export default connect(null, {
   increaseQuantityOrder,
   decreaseQuantityOrder,
+  removeOrder,
 })(OrderCardMini);
