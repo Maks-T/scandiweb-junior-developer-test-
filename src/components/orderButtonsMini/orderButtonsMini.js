@@ -31,6 +31,7 @@ class OrderButtonsMini extends React.Component {
 
     if (quantity > 1) quantity -= 1;
     this.setState({ quantity });
+
     return quantity;
   }
 
