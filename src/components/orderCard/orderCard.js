@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import {
   increaseQuantityOrder,
   decreaseQuantityOrder,
-  removeOrder,
 } from '../../redux/actions';
 
 import './orderCard.style.css';
@@ -40,14 +39,6 @@ class OrderCard extends React.Component {
           curAttr={order.curAttr}
           productId={product.id}
         />
-        {order.quantity === 1 && (
-          <button
-            className="order-card__remove-in-cart"
-            onClick={() => this.removeBtnFromCart()}
-          >
-            remove
-          </button>
-        )}
 
         <div className="order-card__right-side">
           <OrderButtons
@@ -72,16 +63,9 @@ class OrderCard extends React.Component {
     const quantity = decreaseQuantityOrder(order.orderId);
     this.setState({ quantity });
   }
-
-  removeBtnFromCart() {
-    const { order, removeOrder, handleRemoveCard, id } = this.props;
-    removeOrder(order.orderId);
-    handleRemoveCard(id);
-  }
 }
 
 export default connect(null, {
   increaseQuantityOrder,
   decreaseQuantityOrder,
-  removeOrder,
 })(OrderCard);
